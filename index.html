@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kevin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#004b71",
+                    "surface-dim": "#d0daf0",
+                    "primary-container": "#1a365d",
+                    "surface-tint": "#455f88",
+                    "on-primary-fixed": "#001b3c",
+                    "surface-container-high": "#dee8ff",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#adc7f7",
+                    "on-tertiary-fixed": "#111d22",
+                    "on-tertiary-fixed-variant": "#3c494e",
+                    "surface-bright": "#f9f9ff",
+                    "outline-variant": "#c4c6cf",
+                    "on-tertiary-container": "#94a1a8",
+                    "surface-container": "#e7eeff",
+                    "primary-fixed-dim": "#adc7f7",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#273141",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#2c383d",
+                    "on-surface": "#121c2c",
+                    "outline": "#74777f",
+                    "on-primary-container": "#86a0cd",
+                    "on-primary-fixed-variant": "#2d476f",
+                    "surface-container-low": "#f0f3ff",
+                    "on-secondary-container": "#005077",
+                    "secondary": "#006494",
+                    "on-surface-variant": "#43474e",
+                    "tertiary-fixed": "#d8e4eb",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#d6e3ff",
+                    "tertiary-fixed-dim": "#bcc8cf",
+                    "background": "#f9f9ff",
+                    "surface": "#f9f9ff",
+                    "surface-container-highest": "#d9e3f9",
+                    "secondary-fixed": "#cbe6ff",
+                    "tertiary": "#172328",
+                    "primary": "#002045",
+                    "on-background": "#121c2c",
+                    "inverse-on-surface": "#ebf1ff",
+                    "on-secondary-fixed": "#001e30",
+                    "surface-variant": "#d9e3f9",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#8ecdff",
+                    "secondary-container": "#74c3fe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1200px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "margin-desktop": "80px",
+                    "stack-md": "16px",
+                    "section-gap": "120px",
+                    "stack-lg": "32px",
+                    "stack-sm": "8px"
+            },
+            "fontFamily": {
+                    "notoSans": ["Noto Sans TC", "sans-serif"],
+                    "headline-lg-mobile": ["Noto Sans TC"],
+                    "body-md": ["Noto Sans TC"],
+                    "label-md": ["Noto Sans TC"],
+                    "display": ["Noto Sans TC"],
+                    "body-lg": ["Noto Sans TC"],
+                    "headline-lg": ["Noto Sans TC"],
+                    "headline-md": ["Noto Sans TC"],
+                    "display-mobile": ["Noto Sans TC"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.8", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f9f9ff;
+            color: #121c2c;
+            scroll-behavior: smooth;
+        }
+        ::selection {
+            background-color: #002045;
+            color: #ffffff;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-4 bg-surface shadow-md">
+<a class="font-headline-md text-headline-md font-bold text-primary hover:text-secondary transition-all duration-300" href="#hero">Kevin</a>
+<nav class="hidden md:flex gap-8">
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="#hero">首頁</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="#about">關於我</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="#experience">學習經歷</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="#skills">專業技能</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="#contact">聯絡我</a>
+</nav>
+<button id="mobile-menu-btn" class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</header>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed top-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-md hidden md:hidden pt-20 pb-8">
+<nav class="flex flex-col items-center gap-6">
+<a class="text-primary font-bold text-xl" href="#hero">首頁</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 text-xl" href="#about">關於我</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 text-xl" href="#experience">學習經歷</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 text-xl" href="#skills">專業技能</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 text-xl" href="#contact">聯絡我</a>
+</nav>
+</div>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop min-h-screen flex flex-col md:flex-row items-start gap-12 pt-40" id="hero">
+<div class="flex-1 text-center md:text-left">
+<h1 class="font-display-mobile md:font-display text-display-mobile md:text-display text-primary mb-6">
+                    Kevin
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                    吳鳳科技大學畢業生 | 對 UI 設計充滿熱情的初級設計師。專注於創造直觀且易用的使用者介面。
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+<a class="bg-primary text-on-primary px-10 py-4 rounded-lg font-headline-md text-headline-md text-center transition-all" href="#portfolio">
+                        查看作品
+                    </a>
+<a class="bg-surface-container-high text-primary px-10 py-4 rounded-lg font-headline-md text-headline-md text-center transition-all" href="#contact">
+                        聯繫我
+                    </a>
+</div>
+</div>
+<div class="flex-1 w-full max-w-[200px] sm:max-w-[250px] md:max-w-[280px] mx-auto">
+<div class="relative w-full aspect-square rounded-[2rem] overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A clean, modern workspace for a UI designer featuring a high-resolution curved monitor displaying professional Figma design interfaces. The desk is minimalist white wood with a sleek metallic keyboard and mouse. The room is flooded with soft, natural morning light through a large window, creating a peaceful and creative atmosphere with soft azure and deep blue accents throughout the professional studio space." src="public/profile.jpg"/>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="min-h-screen py-section-gap max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop" id="portfolio">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4 text-center">作品集</h2>
+<p class="font-body-md text-body-md text-on-surface-variant text-center mb-12">* DJKridP 為實際合作專案，其餘為虛構設計</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Portfolio Item 1 - Real Project -->
+<div class="bg-surface p-6 rounded-[2rem] border border-outline-variant hover:shadow-lg transition-all">
+<a href="https://djkridp.vercel.app/" target="_blank">
+<div class="relative w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden mb-6 bg-surface-container-low group">
+<img class="w-full h-full object-cover" src="public/project4.png" alt="DJKridP DJ 個人網站"/>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white font-label-md flex items-center gap-2">
+<span class="material-symbols-outlined">open_in_new</span>
+點擊查看網站
+</span>
+</div>
+</div>
+</a>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">DJKridP</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">實際合作專案 - DJ 個人網站設計與開發。合作 1 年，網站連結已由 DJ 本人整合至 streamelements 命令列。</p>
+<a href="https://streamelements.com/djkridp/commands" target="_blank" class="inline-block text-primary hover:text-secondary transition-all text-sm font-label-md">查看 streamelements 命令列 (搜尋 !infobykevin)</a>
+</div>
+<!-- Portfolio Item 2 -->
+<div class="bg-surface p-6 rounded-[2rem] border border-outline-variant hover:shadow-lg transition-all">
+<a href="https://www.figma.com/design/DY2aOMJQ3P38MMPCutNKpl/UI-Design?node-id=0-1&t=C255BKHAvGUPhPyQ-1" target="_blank">
+<div class="relative w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden mb-6 bg-surface-container-low group">
+<img class="w-full h-full object-cover" src="public/project1.png" alt="Chronos 時鐘 App 設計"/>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white font-label-md flex items-center gap-2">
+<span class="material-symbols-outlined">open_in_new</span>
+點擊查看 Figma 設計
+</span>
+</div>
+</div>
+</a>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Chronos</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">一款現代化的時鐘 App，提供多樣化的時鐘樣式與實用功能。</p>
+<a href="public/project1.md" download class="inline-block text-primary hover:text-secondary transition-all text-sm font-label-md">下載設計文件</a>
+</div>
+<!-- Portfolio Item 3 -->
+<div class="bg-surface p-6 rounded-[2rem] border border-outline-variant hover:shadow-lg transition-all">
+<a href="https://www.figma.com/design/DY2aOMJQ3P38MMPCutNKpl/UI-Design?node-id=0-1&t=C255BKHAvGUPhPyQ-1" target="_blank">
+<div class="relative w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden mb-6 bg-surface-container-low group">
+<img class="w-full h-full object-cover" src="public/project2.png" alt="代辦事項 App 設計"/>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white font-label-md flex items-center gap-2">
+<span class="material-symbols-outlined">open_in_new</span>
+點擊查看 Figma 設計
+</span>
+</div>
+</div>
+</a>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">代辦事項 App</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">簡潔高效的代辦事項管理工具，幫助使用者提升生產力。</p>
+<a href="public/project2.md" download class="inline-block text-primary hover:text-secondary transition-all text-sm font-label-md">下載設計文件</a>
+</div>
+<!-- Portfolio Item 4 -->
+<div class="bg-surface p-6 rounded-[2rem] border border-outline-variant hover:shadow-lg transition-all">
+<a href="https://www.figma.com/design/DY2aOMJQ3P38MMPCutNKpl/UI-Design?node-id=0-1&t=C255BKHAvGUPhPyQ-1" target="_blank">
+<div class="relative w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden mb-6 bg-surface-container-low group">
+<img class="w-full h-full object-cover" src="public/project3.png" alt="AD.Studio 個人作品集"/>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white font-label-md flex items-center gap-2">
+<span class="material-symbols-outlined">open_in_new</span>
+點擊查看 Figma 設計
+</span>
+</div>
+</div>
+</a>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">AD.Studio</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">個人作品集網站設計，展示多項設計項目與創意成果。</p>
+<a href="public/project3.md" download class="inline-block text-primary hover:text-secondary transition-all text-sm font-label-md">下載設計文件</a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="bg-surface-container-low py-section-gap" id="about">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="flex-1 order-2 md:order-1">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">關於我</h2>
+<div class="space-y-6 font-body-lg text-body-lg text-on-surface-variant">
+<p>
+                                我已畢業於 <span class="font-bold text-primary">吳鳳科技大學 (2021-2025)</span>。在大學四年的學習歷程中，我深深著迷於介面設計與使用者心理學的結合，並專注於學業與設計能力的提升。
+                            </p>
+<p>
+                                對於設計，我始終抱持著高度的熱忱與對細節的極致追求。我認為好的 UI 不僅僅是視覺上的美觀，更在於能否在每一次點擊、每一秒滑動中，讓使用者感受到流暢與溫暖。
+                            </p>
+</div>
+</div>
+<div class="flex-1 order-1 md:order-2 grid grid-cols-2 gap-4">
+<div class="aspect-square bg-primary-container rounded-[2rem] flex flex-col items-center justify-center text-on-primary p-6">
+<span class="font-display text-display mb-2">4+</span>
+<span class="font-label-md text-label-md">設計學習 (年)</span>
+</div>
+<div class="aspect-square bg-secondary-container rounded-[2rem] flex flex-col items-center justify-center text-on-secondary-container p-6">
+<span class="font-display text-display mb-2">3+</span>
+<span class="font-label-md text-label-md">完成專案</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section (Timeline) -->
+<section class="py-section-gap max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop" id="experience">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-12 text-center">學習經歷</h2>
+<div class="relative">
+<!-- Vertical Line -->
+<div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-1 bg-outline-variant"></div>
+<!-- Timeline Item 1 -->
+<div class="relative mb-16 md:flex md:justify-between items-center w-full">
+<div class="hidden md:block w-5/12"></div>
+<div class="absolute left-[-8px] md:left-1/2 md:-translate-x-1/2 w-5 h-5 bg-primary rounded-full z-10 border-4 border-surface"></div>
+<div class="ml-8 md:ml-0 md:w-5/12 bg-surface-container-low p-8 rounded-[2rem] border border-outline-variant hover:shadow-md transition-all">
+<span class="inline-block px-3 py-1 bg-primary text-on-primary rounded-full font-label-md text-label-md mb-4">2021 - 2022</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">吳鳳科技大學 學生會</h3>
+<p class="font-label-md text-label-md text-secondary mb-4 uppercase">資訊部幹部</p>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li class="flex gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span>檔案管理數位化：負責會議紀錄撰寫與標準化建檔，提升資訊存取效率。</span>
+</li>
+<li class="flex gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span>行政流程優化：透過系統化管理，大幅提升文件處理與作業透明度。</span>
+</li>
+<li class="flex gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span>跨部門活動支援：籌劃大型活動如校慶、演唱會，負責核心後勤資訊統籌。</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="bg-primary py-section-gap" id="skills">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop text-on-primary">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">專業技能</h2>
+<p class="font-body-md text-body-md text-on-primary-container max-w-2xl mx-auto">
+                        融合創意思維與技術實力，致力於透過主流設計工具與使用者研究，打造具有影響力的數位體驗。
+                    </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Skill Card -->
+<div class="bg-primary-container p-8 rounded-[2rem] border border-on-primary-fixed-variant flex flex-col items-center text-center group hover:bg-secondary transition-all">
+<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">palette</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">UI/UX Design</h3>
+<p class="font-label-md text-label-md opacity-70 mb-2">Wireframing • Prototyping • User Research</p>
+</div>
+<div class="bg-primary-container p-8 rounded-[2rem] border border-on-primary-fixed-variant flex flex-col items-center text-center group hover:bg-secondary transition-all">
+<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">polyline</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Figma</h3>
+<p class="font-label-md text-label-md opacity-70 mb-2">Components • Auto Layout • Design Systems</p>
+</div>
+<div class="bg-primary-container p-8 rounded-[2rem] border border-on-primary-fixed-variant flex flex-col items-center text-center group hover:bg-secondary transition-all">
+<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">layers</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Adobe Suite</h3>
+<p class="font-label-md text-label-md opacity-70 mb-2">Photoshop • Illustrator</p>
+</div>
+<div class="bg-primary-container p-8 rounded-[2rem] border border-on-primary-fixed-variant flex flex-col items-center text-center group hover:bg-secondary transition-all">
+<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">responsive_layout</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Responsive</h3>
+<p class="font-label-md text-label-md opacity-70 mb-2">Mobile-First • Tailwind CSS</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop" id="contact">
+<div class="flex flex-col md:flex-row gap-16">
+<div class="flex-1 text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">歡迎聯絡我</h2>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-primary font-bold"><a href="mailto:tyouxipindao@gmail.com" class="text-primary hover:text-secondary transition-all">tyouxipindao@gmail.com</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-1">
+<form class="bg-surface p-8 rounded-[2rem] border border-outline-variant shadow-lg space-y-6" action="https://formspree.io/f/xzdwpabg" method="POST">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">您的姓名</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary p-4" placeholder="請輸入姓名" type="text" name="name" required minlength="2"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">電子信箱</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary p-4" placeholder="email@example.com" type="email" name="email" required/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">訊息內容</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary p-4" placeholder="請輸入您想說的話..." rows="4" name="message" required minlength="10"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-headline-md text-headline-md transition-transform" type="submit">
+                            送出訊息
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-on-primary w-12 h-12 rounded-full shadow-lg hidden items-center justify-center hover:bg-secondary transition-all duration-300 z-50">
+<span class="material-symbols-outlined">arrow_upward</span>
+</button>
+<footer class="w-full py-8 text-center border-t border-outline-variant">
+<div class="font-label-md text-label-md text-on-surface-variant">
+            &copy; 2026 Kevin.
+        </div>
+</footer>
+<script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove('hidden');
+                backToTopButton.classList.add('flex');
+            } else {
+                backToTopButton.classList.add('hidden');
+                backToTopButton.classList.remove('flex');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scroll implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body></html>
