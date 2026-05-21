@@ -126,17 +126,32 @@
             grid-template-columns: repeat(12, 1fr);
             gap: 24px;
         }
+        /* Page transition animation */
+        .page-transition {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body class="bg-background text-on-background overflow-x-hidden">
 <!-- Top Navigation Bar -->
 <header class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-4 bg-surface shadow-md">
-<a class="font-headline-md text-headline-md font-bold text-primary hover:text-secondary transition-all duration-300" href="#hero">Kevin</a>
+<a class="font-headline-md text-headline-md font-bold text-primary hover:text-secondary transition-all duration-300" href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Kevin</a>
 <nav class="hidden md:flex gap-8">
-<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="#hero">首頁</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">首頁</a>
 <a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="#about">關於我</a>
 <a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="#experience">學習經歷</a>
 <a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="#skills">專業技能</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="design-system.html">設計系統</a>
 <a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="#contact">聯絡我</a>
 </nav>
 <button id="mobile-menu-btn" class="md:hidden text-primary">
@@ -146,16 +161,17 @@
 <!-- Mobile Menu -->
 <div id="mobile-menu" class="fixed top-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-md hidden md:hidden pt-20 pb-8">
 <nav class="flex flex-col items-center gap-6">
-<a class="text-primary font-bold text-xl" href="#hero">首頁</a>
+<a class="text-primary font-bold text-xl" href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">首頁</a>
 <a class="text-on-surface-variant hover:text-secondary transition-all duration-300 text-xl" href="#about">關於我</a>
 <a class="text-on-surface-variant hover:text-secondary transition-all duration-300 text-xl" href="#experience">學習經歷</a>
 <a class="text-on-surface-variant hover:text-secondary transition-all duration-300 text-xl" href="#skills">專業技能</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 text-xl" href="design-system.html">設計系統</a>
 <a class="text-on-surface-variant hover:text-secondary transition-all duration-300 text-xl" href="#contact">聯絡我</a>
 </nav>
 </div>
-<main class="pt-32">
+<main class="pt-32 page-transition">
 <!-- Hero Section -->
-<section class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop min-h-screen flex flex-col md:flex-row items-start gap-12 pt-40" id="hero">
+<section class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop min-h-screen flex flex-col md:flex-row items-start gap-12 pt-40" id="top">
 <div class="flex-1 text-center md:text-left">
 <h1 class="font-display-mobile md:font-display text-display-mobile md:text-display text-primary mb-6">
                     Kevin
