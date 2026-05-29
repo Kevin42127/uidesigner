@@ -14,7 +14,7 @@
         theme: {
           extend: {
             "colors": {
-                    "on-secondary-fixed-variant": "#004b71",
+                    "on-secondary-fixed-variant": "#004080",
                     "surface-dim": "#d0daf0",
                     "primary-container": "#1a365d",
                     "surface-tint": "#455f88",
@@ -37,11 +37,11 @@
                     "tertiary-container": "#2c383d",
                     "on-surface": "#121c2c",
                     "outline": "#74777f",
-                    "on-primary-container": "#86a0cd",
+                    "on-primary-container": "#0040e0",
                     "on-primary-fixed-variant": "#2d476f",
                     "surface-container-low": "#f0f3ff",
-                    "on-secondary-container": "#005077",
-                    "secondary": "#006494",
+                    "on-secondary-container": "#003366",
+                    "secondary": "#0055aa",
                     "on-surface-variant": "#43474e",
                     "tertiary-fixed": "#d8e4eb",
                     "surface-container-lowest": "#ffffff",
@@ -53,7 +53,7 @@
                     "surface-container-highest": "#d9e3f9",
                     "secondary-fixed": "#cbe6ff",
                     "tertiary": "#172328",
-                    "primary": "#002045",
+                    "primary": "#0040e0",
                     "on-background": "#121c2c",
                     "inverse-on-surface": "#ebf1ff",
                     "on-secondary-fixed": "#001e30",
@@ -111,7 +111,7 @@
             scroll-behavior: smooth;
         }
         ::selection {
-            background-color: #002045;
+            background-color: #0040e0;
             color: #ffffff;
         }
         .material-symbols-outlined {
@@ -147,26 +147,26 @@
 <header class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-4 bg-surface shadow-md">
 <a class="font-headline-md text-headline-md font-bold text-primary hover:text-secondary transition-all duration-300" href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Kevin</a>
 <nav class="hidden md:flex gap-8">
-<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">首頁</a>
-<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="#about">關於我</a>
-<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="#experience">經歷</a>
-<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="#skills">專業技能</a>
-<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="design-system.html">設計系統</a>
-<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 font-body-md text-body-md" href="#contact">聯絡我</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 font-body-md text-body-md" href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">首頁</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 font-body-md text-body-md" href="#about">關於我</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 font-body-md text-body-md" href="#experience">經歷</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 font-body-md text-body-md" href="#skills">專業技能</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 font-body-md text-body-md" href="design-system.html">設計系統</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 font-body-md text-body-md" href="#contact">聯絡我</a>
 </nav>
 <button id="mobile-menu-btn" class="md:hidden text-primary">
 <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </header>
 <!-- Mobile Menu -->
-<div id="mobile-menu" class="fixed top-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-md hidden md:hidden pt-20 pb-8">
+<div id="mobile-menu" class="fixed top-0 left-0 right-0 z-40 bg-surface-container-lowest hidden md:hidden pt-20 pb-8">
 <nav class="flex flex-col items-center gap-6">
 <a class="text-primary font-bold text-xl" href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">首頁</a>
-<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 text-xl" href="#about">關於我</a>
-<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 text-xl" href="#experience">經歷</a>
-<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 text-xl" href="#skills">專業技能</a>
-<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 text-xl" href="design-system.html">設計系統</a>
-<a class="text-on-surface-variant hover:text-secondary transition-all duration-300 text-xl" href="#contact">聯絡我</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 text-xl" href="#about">關於我</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 text-xl" href="#experience">經歷</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 text-xl" href="#skills">專業技能</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 text-xl" href="design-system.html">設計系統</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 text-xl" href="#contact">聯絡我</a>
 </nav>
 </div>
 <main class="pt-32 page-transition">
@@ -330,7 +330,7 @@
 <section class="bg-surface-container-low py-section-gap" id="about">
 <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="flex flex-col md:flex-row gap-16 items-center">
-<div class="flex-1 order-2 md:order-1">
+<div class="flex-1 text-center md:text-left md:order-1">
 <h2 class="font-headline-lg text-headline-lg text-primary mb-8">關於我</h2>
 <div class="space-y-6 font-body-lg text-body-lg text-on-surface-variant">
 <p>
@@ -341,15 +341,15 @@
                             </p>
 </div>
 </div>
-<div class="flex-1 order-1 md:order-2 grid grid-cols-2 gap-4">
-<div class="aspect-square bg-primary-container rounded-[2rem] flex flex-col items-center justify-center text-on-primary p-6">
-<span class="font-display text-display mb-2">4+</span>
-<span class="font-label-md text-label-md">年設計學習經驗</span>
-</div>
-<div class="aspect-square bg-secondary-container rounded-[2rem] flex flex-col items-center justify-center text-on-secondary-container p-6">
-<span class="font-display text-display mb-2">7+</span>
-<span class="font-label-md text-label-md">完成專案</span>
-</div>
+<div class="flex-1 text-center md:text-right md:order-2 grid grid-cols-2 gap-4 max-w-2xl mx-auto md:max-w-none md:mx-0">
+<a href="mailto:tyouxipindao@gmail.com" class="aspect-square bg-surface p-6 rounded-[2rem] border border-outline-variant flex flex-col items-center justify-center text-center hover:shadow-lg transition-all group">
+<span class="material-symbols-outlined text-primary text-[32px] mb-2 group-hover:scale-110 transition-transform">mail</span>
+<span class="font-label-md text-label-md text-on-surface">Email</span>
+</a>
+<a href="tel:0901299551" class="aspect-square bg-surface p-6 rounded-[2rem] border border-outline-variant flex flex-col items-center justify-center text-center hover:shadow-lg transition-all group">
+<span class="material-symbols-outlined text-primary text-[32px] mb-2 group-hover:scale-110 transition-transform">phone</span>
+<span class="font-label-md text-label-md text-on-surface">電話</span>
+</a>
 </div>
 </div>
 </div>
@@ -387,43 +387,36 @@
 </div>
 </section>
 <!-- Skills Section -->
-<section class="bg-primary py-section-gap" id="skills">
-<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop text-on-primary">
+<section class="bg-surface-container py-section-gap" id="skills">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="text-center mb-16">
-<h2 class="font-headline-lg text-headline-lg mb-4">專業技能</h2>
-<p class="font-body-md text-body-md text-on-primary-container max-w-2xl mx-auto">
-                        融合創意思維與技術實力，致力於透過主流設計工具與使用者研究，打造具有影響力的數位體驗。
-                    </p>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">專業技能</h2>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 <!-- Skill Card -->
-<div class="bg-primary-container p-8 rounded-[2rem] border border-on-primary-fixed-variant flex flex-col items-center text-center group hover:bg-secondary transition-all">
-<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<div class="bg-surface p-8 rounded-[2rem] border border-outline-variant flex flex-col items-center text-center group hover:shadow-lg transition-all">
+<div class="w-16 h-16 rounded-full bg-surface-container text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 <span class="material-symbols-outlined text-[32px]">palette</span>
 </div>
 <h3 class="font-headline-md text-headline-md mb-2">UI/UX Design</h3>
-<p class="font-label-md text-label-md opacity-70 mb-2">Wireframing • Prototyping • User Research</p>
 </div>
-<div class="bg-primary-container p-8 rounded-[2rem] border border-on-primary-fixed-variant flex flex-col items-center text-center group hover:bg-secondary transition-all">
-<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<div class="bg-surface p-8 rounded-[2rem] border border-outline-variant flex flex-col items-center text-center group hover:shadow-lg transition-all">
+<div class="w-16 h-16 rounded-full bg-surface-container text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 <span class="material-symbols-outlined text-[32px]">polyline</span>
 </div>
 <h3 class="font-headline-md text-headline-md mb-2">Figma</h3>
-<p class="font-label-md text-label-md opacity-70 mb-2">Components • Auto Layout • Design Systems</p>
 </div>
-<div class="bg-primary-container p-8 rounded-[2rem] border border-on-primary-fixed-variant flex flex-col items-center text-center group hover:bg-secondary transition-all">
-<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<div class="bg-surface p-8 rounded-[2rem] border border-outline-variant flex flex-col items-center text-center group hover:shadow-lg transition-all">
+<div class="w-16 h-16 rounded-full bg-surface-container text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 <span class="material-symbols-outlined text-[32px]">layers</span>
 </div>
 <h3 class="font-headline-md text-headline-md mb-2">Adobe Suite</h3>
-<p class="font-label-md text-label-md opacity-70 mb-2">Photoshop • Illustrator</p>
 </div>
-<div class="bg-primary-container p-8 rounded-[2rem] border border-on-primary-fixed-variant flex flex-col items-center text-center group hover:bg-secondary transition-all">
-<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<div class="bg-surface p-8 rounded-[2rem] border border-outline-variant flex flex-col items-center text-center group hover:shadow-lg transition-all">
+<div class="w-16 h-16 rounded-full bg-surface-container text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 <span class="material-symbols-outlined text-[32px]">responsive_layout</span>
 </div>
 <h3 class="font-headline-md text-headline-md mb-2">Responsive</h3>
-<p class="font-label-md text-label-md opacity-70 mb-2">Mobile-First • Tailwind CSS</p>
 </div>
 </div>
 </div>
