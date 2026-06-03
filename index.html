@@ -328,10 +328,10 @@
 </div>
 </div>
 <div class="flex-1 text-center md:text-right md:order-2 grid grid-cols-2 gap-4 max-w-2xl mx-auto md:max-w-none md:mx-0">
-<a href="mailto:tyouxipindao@gmail.com" class="aspect-square bg-surface p-6 rounded-[2rem] border border-outline-variant flex flex-col items-center justify-center text-center hover:shadow-lg transition-all group">
+<button onclick="copyEmail()" class="aspect-square bg-surface p-6 rounded-[2rem] border border-outline-variant flex flex-col items-center justify-center text-center hover:shadow-lg transition-all group cursor-pointer">
 <span class="material-symbols-outlined text-primary text-[32px] mb-2 group-hover:scale-110 transition-transform">mail</span>
 <span class="font-label-md text-label-md text-on-surface">Email</span>
-</a>
+</button>
 <a href="tel:0901299551" class="aspect-square bg-surface p-6 rounded-[2rem] border border-outline-variant flex flex-col items-center justify-center text-center hover:shadow-lg transition-all group">
 <span class="material-symbols-outlined text-primary text-[32px] mb-2 group-hover:scale-110 transition-transform">phone</span>
 <span class="font-label-md text-label-md text-on-surface">電話</span>
@@ -418,7 +418,7 @@
 <span class="material-symbols-outlined">mail</span>
 </div>
 <div>
-<p class="font-body-lg text-body-lg text-primary font-bold"><a href="mailto:tyouxipindao@gmail.com" class="text-primary hover:text-secondary transition-all">tyouxipindao@gmail.com</a></p>
+<p class="font-body-lg text-body-lg text-primary font-bold"><button onclick="copyEmail()" class="text-primary hover:text-secondary transition-all cursor-pointer">tyouxipindao@gmail.com</button></p>
 </div>
 </div>
 </div>
@@ -445,6 +445,15 @@
 </div>
 </section>
 </main>
+
+<!-- Toast Notification -->
+<div id="toast" class="fixed top-32 left-1/2 transform -translate-x-1/2 z-[100] hidden">
+<div class="bg-primary text-on-primary px-6 py-3 rounded-lg shadow-lg flex items-center gap-3 whitespace-nowrap">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="font-label-md text-label-md">Email 已複製！</span>
+</div>
+</div>
+
 <!-- Bottom Navigation (Mobile Only) -->
 <nav class="fixed bottom-0 left-0 right-0 z-50 bg-surface border-t border-outline-variant md:hidden">
 <div class="flex justify-around items-center py-3">
@@ -485,6 +494,29 @@
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
         });
+
+        // Copy Email to Clipboard
+        function copyEmail() {
+            const email = 'tyouxipindao@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                showToast();
+            }).catch(err => {
+                console.error('複製失敗:', err);
+                alert('複製失敗，請手動複製：' + email);
+            });
+        }
+
+        // Show Toast Notification
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+            
+            setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('flex');
+            }, 5000);
+        }
 
         // Smooth scroll implementation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
