@@ -154,21 +154,7 @@
 <a class="text-on-surface-variant hover:text-primary transition-all duration-300 font-body-md text-body-md" href="design-system.html">設計系統</a>
 <a class="text-on-surface-variant hover:text-primary transition-all duration-300 font-body-md text-body-md" href="#contact">聯絡我</a>
 </nav>
-<button id="mobile-menu-btn" class="md:hidden text-primary">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
 </header>
-<!-- Mobile Menu -->
-<div id="mobile-menu" class="fixed top-0 left-0 right-0 z-40 bg-surface-container-lowest hidden md:hidden pt-20 pb-8">
-<nav class="flex flex-col items-center gap-6">
-<a class="text-primary font-bold text-xl" href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">首頁</a>
-<a class="text-on-surface-variant hover:text-primary transition-all duration-300 text-xl" href="#about">關於我</a>
-<a class="text-on-surface-variant hover:text-primary transition-all duration-300 text-xl" href="#experience">經歷</a>
-<a class="text-on-surface-variant hover:text-primary transition-all duration-300 text-xl" href="#skills">專業技能</a>
-<a class="text-on-surface-variant hover:text-primary transition-all duration-300 text-xl" href="design-system.html">設計系統</a>
-<a class="text-on-surface-variant hover:text-primary transition-all duration-300 text-xl" href="#contact">聯絡我</a>
-</nav>
-</div>
 <main class="pt-32 page-transition">
 <!-- Hero Section -->
 <section class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop min-h-screen flex flex-col md:flex-row items-start gap-12 pt-40" id="top">
@@ -459,10 +445,36 @@
 </div>
 </section>
 </main>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-surface border-t border-outline-variant md:hidden">
+<div class="flex justify-around items-center py-3">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-xs font-label-md">首頁</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" href="#about">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-xs font-label-md">關於</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" href="#experience">
+<span class="material-symbols-outlined text-2xl">work</span>
+<span class="text-xs font-label-md">經歷</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" href="#skills">
+<span class="material-symbols-outlined text-2xl">school</span>
+<span class="text-xs font-label-md">技能</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" href="design-system.html">
+<span class="material-symbols-outlined text-2xl">description</span>
+<span class="text-xs font-label-md">設計</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" href="#contact">
+<span class="material-symbols-outlined text-2xl">mail</span>
+<span class="text-xs font-label-md">聯絡</span>
+</a>
+</div>
+</nav>
 <!-- Footer -->
-<button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-on-primary w-12 h-12 rounded-full shadow-lg hidden items-center justify-center hover:bg-secondary transition-all duration-300 z-50">
-<span class="material-symbols-outlined">arrow_upward</span>
-</button>
 <footer class="w-full py-8 text-center border-t border-outline-variant">
 <div class="font-label-md text-label-md text-on-surface-variant">
             &copy; 2026 Kevin.
@@ -474,26 +486,6 @@
             e.preventDefault();
         });
 
-        // Back to top button
-        const backToTopButton = document.getElementById('back-to-top');
-        
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 300) {
-                backToTopButton.classList.remove('hidden');
-                backToTopButton.classList.add('flex');
-            } else {
-                backToTopButton.classList.add('hidden');
-                backToTopButton.classList.remove('flex');
-            }
-        });
-
-        backToTopButton.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
         // Smooth scroll implementation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -501,20 +493,7 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
-                // Close mobile menu if open
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
             });
-        });
-
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
         });
     </script>
 </body></html>
